@@ -1,0 +1,27 @@
+{
+    "name": "WoiCommerce",
+    "requires": [
+        "ext",
+        "package"
+    ],
+    "builds": {
+        "classic": {
+            "toolkit": "classic",
+            "theme": "theme-triton",
+            "output": "${workspace.build.dir}/classic/${build.environment}",
+            "sass": {
+                "options": {
+                    "outputStyle": "compressed"
+                }
+            }
+        }
+    },
+    "production": {
+        "compress": true, // Enable compression for JavaScript
+        "optimize": {
+            "js": true, // Optimize JavaScript
+            "css": true, // Optimize CSS
+            "html": true // Optimize HTML
+        }
+    }
+}
